@@ -1,16 +1,16 @@
 let id = (id) => document.getElementById(id);
-let classes = (classes) => document.getElementsByIdName(classes);
+let classes = (classes) => document.getElementsByClassName(classes);
 
-let username = (username),
-    email = id('email'),
-    password = id('password'),
-    form = id('form'),
+let username = id("username"),
+    email = id("email"),
+    password = id("password"),
+    form = id("form"),
 
-    errorMsg = classes('error'),
-    successIcon = classes('message-check'),
-    failureIcon = classes('message-error');
+    errorMsg = classes("error"),
+    successIcon = classes("message-check"),
+    failureIcon = classes("message-error");
 
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     engine(username, 0, "Username cannot be blank");
@@ -19,17 +19,17 @@ form.addEventListener('submit', (e) => {
 });
 
 let engine = (id, serial, message) => {
-    if(id.value.trim() === '') {
+    if(id.value.trim() === "") {
         errorMsg[serial].innerHTML = message;
-        id.style.border = '2px solid red';
+        id.style.border = "2px solid red";
 
         //icons
-        failureIcon[serial].style.opacity = '1';
-        successIcon[serial].style.opacity = '0';
+        failureIcon[serial].style.opacity = "1";
+        successIcon[serial].style.opacity = "0";
     }
 
     else {
-        errorMsg[serial].innerHTML = '';
+        errorMsg[serial].innerHTML = "";
         id.style.border = '2px solid green';
 
         //icons
