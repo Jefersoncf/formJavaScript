@@ -6,6 +6,14 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+.container {
+    /* background-color: #d5dbdb; */
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    margin: 20px;
+
+}
 
 /* style for form section */
 form {
@@ -13,7 +21,7 @@ form {
     flex-direction: column;
     justify-content: center;
     max-width: 500px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.1);
     padding: 50px;
 }
 .title {
@@ -31,7 +39,7 @@ form div input  {
     border-radius: 8px;
     outline: none;
     border: 2px solid #c4c4c4;
-    padding: 0 30px;
+    padding: 0 35px;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
 }
 form div {
@@ -43,8 +51,7 @@ input:focus{
 }
 form div i {
     position: absolute;
-    padding: 10px; /*rever*/
-    /* left: -.2rem; */
+    padding: 8px;
 }
 .message-error,
 .error {
@@ -61,8 +68,7 @@ form div i {
 .message-check,
 .message-error {
     margin: 10px;
-     right: 0px;
-     /* bottom: 2px; */
+    right: 0px;
     opacity: 0; 
  }
 button {
@@ -80,4 +86,57 @@ button {
 }
 button:hover {
     opacity: 0.8;
+}
+
+/* botões redes sociais */
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn01, .btn02{
+    padding: 10px 5px;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.btn02 {
+    background-color: #4f70b5;
+    color: white;
+}
+.or{
+    text-align:center;
+}
+.question {
+    font-size: 15px;
+}
+span{
+    color: #f2796e;
+    cursor: pointer;
+}
+.line {
+    width: 40%;
+    display: flex;
+    height: 1px;
+    margin-bottom: -12px;
+    padding: 0;
+    background-color: #909696;
+    position: relative;
+}
+.line2 {
+    width: 40%;
+    display: flex;
+    left: 60%;
+    top: -29px;
+    height: 1px;
+    padding: 0;
+    background-color: #909696;
+    position: relative;
 }
